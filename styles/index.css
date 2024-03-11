@@ -5,6 +5,7 @@
 	--bg-blend-color: #f0f0f0;
 	--nav-text-color: black;
 	--ease-text-color: #30313b;
+	--side-margins: 8vw;
 }
 
 @font-face {
@@ -48,16 +49,25 @@
 }
 
 .nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
 	margin-top: 5vh;
 	margin-bottom: 5vh;
-	margin-left: 8vw;
-	margin-right: 8vw;
-	grid-template-columns: 1fr 3fr;
+	margin-left: var(--side-margins);
+	margin-right: var(--side-margins);
+	
 }
 
 .nav-buttons {
 	float: right;
 	
+}
+
+.nav-buttons-container {
+	float: right;
 }
 
 .nav-button {
@@ -85,8 +95,13 @@
 	border: 1px solid var(--accent-color);
 }
 
-.logo {
+.logo-wrap {
 
+}
+
+#logo {
+    max-width: 70%;
+    object-fit: scale-down;
 }
 
 .hover-underline-animation {
@@ -114,17 +129,20 @@
 }
 
 .main-container {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	height: 80vh;
+	display: table-cell;
+	vertical-align: middle;
+
+	height: 100vh;
+	
 }
 
 .cta {
+	display: inline-block;
 	font-family: buttershine;
 	font-size: 15vh;
 	line-height: 1.2;
-	margin: auto;
-	padding-bottom: 10vh;
+	margin-left: var(--side-margins);
+	margin-right: var(--side-margins);
 }
 
 .cta-side {
@@ -155,8 +173,6 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	
-	
 }
 
 #gradient-1 {
@@ -165,7 +181,7 @@
 }
 
 #gradient-2 {
-	opacity: 50%;
+	opacity: 75%;
 	background: radial-gradient(circle, #9d66d0, #66aed0, #f7d19c, #ebab51);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
