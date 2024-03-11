@@ -197,3 +197,15 @@ body {
 #flip-word {
 	display: inline-block;
 }
+
+.cta-button-container {
+	margin-top: 10px;
+	margin-left: var(--side-margins);
+	margin-right: var(--side-margins);
+}
+
+.cta-button {
+	font-size: 1.5vw;
+	transition-duration: .3s;
+	cursor: pointer;
+}
