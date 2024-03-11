@@ -29,6 +29,24 @@
 	}
 }
 
+
+@keyframes skew {
+	0% {
+		transform: skew(0deg, 0deg);
+	}
+	47% {
+		transform: skew(5deg, 5deg);
+	}
+	50% {
+		transform: skew(45deg, 45deg);	}
+	53% {
+		transform: skew(5deg, 5deg);
+	}
+	100% {
+		transform: skew(0deg, 0deg);
+	}
+}
+
 .nav {
 	margin-top: 5vh;
 	margin-bottom: 5vh;
@@ -116,7 +134,7 @@
 
 .cta-main {
 	font-size: 15vh;
-	background: linear-gradient(-45deg, #9d66d0, #66aed0, #f7d19c, #ebab51);
+	background: radial-gradient(circle, #9d66d0, #66aed0, #f7d19c, #ebab51);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 
@@ -148,7 +166,7 @@
 
 #gradient-2 {
 	opacity: 50%;
-	background: linear-gradient(-45deg, #9d66d0, #66aed0, #f7d19c, #ebab51);
+	background: radial-gradient(circle, #9d66d0, #66aed0, #f7d19c, #ebab51);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	z-index: -2;
@@ -157,4 +175,9 @@
 body {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+}
+
+#flip-word {
+	display: inline-block;
 }
