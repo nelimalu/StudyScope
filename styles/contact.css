@@ -1,0 +1,133 @@
+:root {
+	--powerful-accent-color: orange;
+	--accent-color: #f3b562;
+	--bg-color: white;
+	--bg-blend-color: #f0f0f0;
+	--nav-text-color: white;
+	--ease-text-color: #30313b;
+	--side-margins: 8vw;
+	--nav-background: #553285;
+}
+
+@font-face {
+	font-family: D-DIN;
+	src: url('../assets/fonts/D-DIN.ttf') format("truetype");
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.main-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(5px);
+}
+.nav {
+	z-index: 1;
+}
+
+
+.contact-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	font-family: D-DIN;
+	padding: 2vw;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.1);
+
+	width: 30%;
+}
+
+.contact-title {
+	text-align: center;
+	font-size: 2vw;
+}
+
+.contact-extra-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	text-align: center;
+	padding: 1vw;
+	border-bottom: 1px solid var(--accent-color);
+	border-image: linear-gradient(-45deg, #9d66d0, #66aed0, #f7d19c, #ebab51);
+	border-image-slice: 1;
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	padding: 2vw;
+	padding-bottom: 1vw;
+}
+
+#name {
+	font-family: D-DIN;
+	outline: none;
+	border: none;
+	margin: 0.5vw;
+	padding-bottom: 5px;
+	border-bottom: 1px solid black;
+	transition-duration: .3s;
+}
+
+#name:focus {
+	border-bottom: 1px solid var(--accent-color);
+}
+
+#message {
+	resize: none;
+	height: 1000%;
+	margin: 0.5vw;
+	outline: none;
+	border: 1px solid gray;
+	font-family: D-DIN;
+	border-radius: 10px;
+	padding: 0.5vw;
+	transition-duration: .3s;
+}
+
+
+#message:focus {
+	border: 1px solid var(--accent-color);
+}
+
+#submit {
+	font-family: D-DIN;
+	outline: none;
+	background-color: white;
+	border: 1px solid var(--accent-color);
+	color: var(--accent-color);
+	border-radius: 100px;
+	padding: .5vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin: auto;
+	transition-duration: .3s;
+}
+
+#submit:hover {
+	background-color: var(--accent-color);
+	color: white;
+	border: 1px solid var(--accent-color);
+}
+
+.submit-span {
+	margin: auto;
+}
+
+.submit-container {
+	display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+

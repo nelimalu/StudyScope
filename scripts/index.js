@@ -14,6 +14,7 @@ var counter = 1;
 
 window.addEventListener('DOMContentLoaded', (event) => {
     
+    /*
     let flipword = document.getElementById("flip-word");
     flipword.style.animation = `skew ${flipword_interval}s ease infinite`;
 
@@ -29,7 +30,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             change_word();
         }, flipword_interval * 1000);
     }, flipword_interval * 500)
-
+    */
    
 
 });
