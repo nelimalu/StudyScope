@@ -3,66 +3,177 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>home / StudyScope</title>
-		<link rel="stylesheet" type="text/css" href="styles/index.css">
-		<link rel="stylesheet" type="text/css" href="styles/nav.css">
+		<title>StudyScope | Home</title>
+		<link rel="shortcut icon" href="assets/images/Icon.ico" />
 
-		<link rel="shortcut icon" href="assets/images/logo.ico" />
-		<script src='scripts/index.js'></script>
+		<link rel="stylesheet" type="text/css" href="styles/nav.css">
+		<link rel="stylesheet" type="text/css" href="styles/index.css">
 	</head>
 	<body>
-
-
-		<div id="gradient-1" class="background-gradient"></div>
-		<div id="gradient-2" class="background-gradient"></div>
-
+		<script src="scripts/index.js"></script>
 
 		<div class="nav">
 			<div class="logo-wrap">
-				<a href="index.html">
-					<img id="logo" src="assets/images/StudyScopeLogo.jpg" alt="StudyScope Logo">
+				<a href="index.html" class="logo-anchor">
+					<img id="logo" src="assets/images/magnifying.svg" alt="StudyScope Logo">
+					<span class="logo-text">
+						StudyScope
+					</span>
 				</a>
 			</div>
+
 			<div class="nav-buttons">
 				<div class="nav-buttons-container">
 					<a class="nav-button hover-underline-animation" href="programs.html">
-						PROGRAMS
+						Programs
 					</a>
 					<a class="nav-button hover-underline-animation" href="apply.html">
-						JOIN OUR TEAM
+						Join Our Team
 					</a>
 					<a class="nav-button hover-underline-animation" href="contact.html">
-						CONTACT
+						Contact
 					</a>
 					<a class="nav-button hover-underline-animation" href="about.html">
-						ABOUT US
+						Company
 					</a>
-					<a class="nav-button register" href="contact.html">
-						REGISTER
-					</a>
+					
 				</div>
 			</div>
+
+			<div class="nav-register">
+				<a class="nav-button register" href="contact.html">
+					Register
+				</a>
+			</div>
 		</div>
 
-		<div class="main-container">
+
+		<div class="main-content">
 
 			<div class="cta">
-				<div class="cta-side">TUTORING</div>
-				<div class="cta-main">BY STUDENTS,</div>
-				<div class="cta-side">FOR STUDENTS</div>
-
+				<div class="cta-major">
+					<span class="">Tutoring</span><br>
+					<span class="gradient">
+						<span id="scroll">For</span>
+						Students
+					</span>
+				</div>
+				<div class="cta-about">
+					The student-run tutoring program with a custom curriculum designed to help you thrive academically.
+				</div>
+				<div class="cta-register">
+					Register
+				</div>
 			</div>
-			<div class="cta-button-container">
-				<span class="cta-button register">
-					LEARN MORE
-				</span>
+
+			<!-- spec is short for specializations -->
+			<div class="spec">
+				<div class="spec-header">
+					We specialize in
+				</div>
+				<div class="spec-wrapper">
+					<div class="spec-subject">
+						<img class="spec-logo" src="assets/images/math.svg" alt="Math Icon">
+						<span class="spec-description">Math</span>
+					</div>
+					<div class="spec-subject">
+						<img class="spec-logo" src="assets/images/english.svg" alt="English Icon">
+						<span class="spec-description">English</span>
+					</div>
+					<div class="spec-subject">
+						<img class="spec-logo" src="assets/images/science.svg" alt="Science Icon">
+						<span class="spec-description">Science</span>
+					</div>
+					<div class="spec-subject">
+						<img class="spec-logo" src="assets/images/french.svg" alt="French Icon">
+						<span class="spec-description">French</span>
+					</div>
+				</div>
 			</div>
 
-			<div class="hook">
-				<img src="assets/images/paper-animated.gif" alt="Paper Animation">
+			<div id="programs">
+				<div class="programs-title">
+					Our Programs
+				</div>
+				<div class="panels">
+					<div class="panel">
+						<div class="panel-image-wrapper">
+							<img src="assets/images/curriculum.jpg" alt="filler" class="panel-image">
+						</div>
+						<div class="panel-info">
+							<div class="panel-title">
+								Curriculum Based
+							</div>
+							<div class="panel-price">
+								$20-$25/hr
+							</div>
+							<div class='panel-tags'>
+								<div class='panel-tag green'>1 on 1</div>
+								<div class='panel-tag orange'>Small Class</div>
+								<div class='panel-tag blue'>Virtual</div>
+								<div class='panel-tag purple'>In-Person</div>
+							</div>
+							<div class="panel-description">
+								someone needs to write up a description for this
+							</div>
+							<div class='panel-register'>
+								Register
+							</div>
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-image-wrapper">
+							<img src="assets/images/curriculum.jpg" alt="filler" class="panel-image">
+						</div>
+						<div class="panel-info">
+							<div class="panel-title">
+								Individual Tutoring
+							</div>
+							<div class="panel-price">
+								$15-$20/hr
+							</div>
+							<div class='panel-tags'>
+								<div class='panel-tag green'>1 on 1</div>
+								<div class='panel-tag blue'>Virtual</div>
+								<div class='panel-tag purple'>In-Person</div>
+							</div>
+							<div class="panel-description">
+								someone needs to write up a description for this
+							</div>
+							<div class='panel-register'>
+								Register
+							</div>
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-image-wrapper">
+							<img src="assets/images/curriculum.jpg" alt="filler" class="panel-image">
+						</div>
+						<div class="panel-info">
+							<div class="panel-title">
+								English Language Learning
+							</div>
+							<div class="panel-price">
+								Price TBD
+							</div>
+							<div class='panel-tags'>
+								<div class='panel-tag red'>Coming Soon</div>
+							</div>
+							<div class="panel-description">
+								someone needs to write up a description for this
+							</div>
+							<div class='panel-register'>
+								Register
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</div>
+
 
 	</body>
 </html>

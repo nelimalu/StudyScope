@@ -1,80 +1,86 @@
 :root {
-	--powerful-accent-color: orange;
-	--accent-color: #f3b562;
-	--bg-color: white;
-	--bg-blend-color: #f0f0f0;
-	--nav-text-color: white;
-	--ease-text-color: #30313b;
-	--side-margins: 8vw;
-	--nav-background: #553285;
+	--nav-text-color: #222222;
+	--nav-reg-color: #2f2f2f;
+	--logo-height: 35px;
+	--reg-spread: 4px;
 }
 
 @font-face {
-	font-family: D-DIN;
+	font-family: inter;
 	src: url('../assets/fonts/Inter-Regular.otf') format("opentype");
 }
 
 @font-face {
-	font-family: buttershine;
-	src: url('../assets/fonts/Inter-Regular.otf') format("opentype");
+	font-family: inter-semibold;
+	src: url('../assets/fonts/Inter-SemiBold.otf') format("opentype");
+}
+
+body {
+	font-family: inter;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
 }
 
 .nav {
-	position: absolute;
-	top: 0;
-	left: 0;
 	display: grid;
-	grid-template-columns: 1fr 3fr;
-	padding-top: 3vh;
-	padding-bottom: 3vh;
-	padding-left: var(--side-margins);
-	padding-right: var(--side-margins);
-	background-color: var(--nav-background);
-}
-
-.nav-buttons {
-	float: right;
-	
-}
-
-.nav-buttons-container {
-	float: right;
-}
-
-.nav-button {
-	font-family: D-DIN;
-	margin: 12px;
-	cursor: pointer;
-	border-radius: 10px;
-	transition-duration: .3s;
-	text-align: center;
-	font-size: 1.2em;
-	padding-bottom: 3px;
-	text-decoration: none;
-	color: var(--nav-text-color);
-}
-
-.register {
-	font-family: D-DIN;
-	color: var(--powerful-accent-color);
-	border: 1px solid var(--powerful-accent-color);
-	border-radius: 0px;
-	padding: 10px;
-}
-
-.register:hover {
-	color: var(--bg-color);
-	background-color: var(--accent-color);
-	border: 1px solid var(--accent-color);
+	grid-template-columns: 1fr 2fr 1fr;
+	margin: 2vh 3vw 2vh 3vw;
+	font-size: 105%;
 }
 
 .logo-wrap {
+	display: table-cell;
+	font-family: inter-semibold;
+	font-size: 150%;
+	line-height: var(--logo-height);
+	vertical-align: middle;
 
 }
 
 #logo {
-    max-width: 40%;
-    object-fit: scale-down;
+	height: var(--logo-height);
+	vertical-align: middle;
+}
+
+.logo-text {
+	color: black;
+	display: inline-block;
+}
+
+.nav-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: var(--nav-text-color);
+}
+
+.nav-button {
+	text-decoration: none;
+	margin: 10px;
+	padding: 1px;
+}
+
+.nav-register {
+	margin: 0;
+}
+
+.register {
+	float: right;
+	background-color: var(--nav-reg-color);
+	color: white;
+	padding: 10px 20px 10px 20px;
+	border-radius: 100px;
+	margin: 0;
+	transition-duration: .3s
+}
+
+.register:hover {
+	padding: 10px calc(20px + var(--reg-spread)) 10px calc(20px + var(--reg-spread));
+	transform: translateX(var(--reg-spread));
 }
 
 .hover-underline-animation {
