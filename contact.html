@@ -6,10 +6,15 @@
 		<title>StudyScope | Contact</title>
 		<link rel="stylesheet" type="text/css" href="styles/nav.css">
 		<link rel="stylesheet" type="text/css" href="styles/contact.css">
+		<link rel="stylesheet" type="text/css" href="styles/sufi.css">
+
 		<link rel="shortcut icon" href="assets/images/Icon.ico" />
 	</head>
 	<body>
 		
+		<canvas id="background"></canvas>
+		<script src='scripts/contact.js'></script>	
+		<script src="scripts/slideupfadein.js"></script>
 
 
 		<div class="nav">
@@ -47,6 +52,28 @@
 			</div>
 		</div>
 
+		<div id="main-container">
+			<div class="info">
+				info@studyscopetutoring.com<br>
+				(416) 846-3634
+			</div>
+			<div class="wrapper">
+				<div id="title">
+					Hello 👋 What's your name?
+				</div>
+
+				<div id="input-area">
+					<input type='text' class="input-text" id="input" autocomplete="off" placeholder="John Smith...">
+				</div>
+
+				<div class="buttons-container">
+					<button class="button disable" id="prev" onclick="prev()"><div>⬅</div></button>
+					<button class="button" id="next" onclick="next()"><div>➡</div></button>
+				</div>
+			</div>
+		</div>
+
+		<!--
 		<div class="main-container">
 			<div class="contact-box">
 				<div class="contact-info">
@@ -64,10 +91,10 @@
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
+		-->
 
-		<canvas id="background"></canvas>
-		<script src='scripts/contact.js'></script>	
+
 
 	</body>
 </html>

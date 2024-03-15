@@ -8,35 +8,96 @@ var mouse = {
 	y: canvas.height / 2
 }
 
-function send() {
+var phase = 0;
+var name = "";
+var email = "";
+var message = "";
 
-	let name = document.getElementById("name");
-	let message = document.getElementById("message");
-	let submit = document.getElementById("submit");
+function next() {
+	let input = document.getElementById("input");
+	let msg = document.getElementById("message");
 
+	let inputArea = document.getElementById("input-area");
+	let title = document.getElementById("title");
+	let backButton = document.getElementById("prev");
+	let nextButton = document.getElementById("next");
 
-	if (name.value === "") {
-		name.style.borderBottom = "1px solid red";
-	} else {
-		name.style.borderBottom = "1px solid black";
+	if (phase == 0) {
+		name = input.value;
+		input.value = "";
+		input.placeholder = "john.smith@example.com";
+		backButton.classList.remove("disable");
+
+		title.innerHTML = "Hi" + (name.length > 0 ? " " : "") + name + ", what's your email address?";
 	}
-	if (message.value === "") {
-		message.style.border = "1px solid red";
-	} else {
-		message.style.border = "1px solid gray";
+	if (phase == 1) {
+		email = input.value;
+		inputArea.innerHTML = `
+			<textarea id="message" rows="5" cols="50" placeholder="Your message here..."></textarea>
+		`;
 
+		title.innerHTML = "Feel free to send us a message!";
+	} if (phase == 2) {
+		message = msg.value;
+		nextButton.classList.add("disable");
+		inputArea.innerHTML = `
+			<div class="send-container">
+				<button id="send" onclick="send()">Send</button>
+			</div>
+		`;
+
+		title.innerHTML = "You're all set! Just one more click.";
 	}
+	console.log(phase)
 
-	if (name.value !== "" && message.value !== "") {
-		submit.style.backgroundColor = "#a7f79e";
-		submit.style.color = "white";
-
-		submit.style.border = "1px solid #a7f79e";
-		submit.innerHTML = "Sent!"
-		document.location = `mailto:lukaj2501@gmail.com?subject=Hello from ${name.value}&body=${message.value}`;
-	}
+	phase++;
+	if (phase > 3)
+		phase = 3;
 }
 
+function prev() {
+	let input = document.getElementById("input");
+	let inputArea = document.getElementById("input-area");
+	let title = document.getElementById("title");
+	let backButton = document.getElementById("prev");
+	let nextButton = document.getElementById("next");
+
+	if (phase == 1) {
+		backButton.classList.add("disable");
+		title.innerHTML = "Hello 👋 What's your name?"
+		input.placeholder = "John Smith";
+		input.value = name;
+	}
+	if (phase == 2) {
+		inputArea.innerHTML = `<input type='text' class="input-text" id="input" autocomplete="off" placeholder="John Smith...">`;
+	let input = document.getElementById("input");
+		
+		input.value = email;
+		input.placeholder = "john.smith@example.com";
+
+		title.innerHTML = "Hi" + (name.length > 0 ? " " : "") + name + ", what's your email address?";
+	}
+	if (phase == 3) {
+		
+		inputArea.innerHTML = `
+			<textarea id="message" rows="5" cols="50" placeholder="Your message here..."></textarea>
+		`;
+		let input = document.getElementById("message");
+		input.value = message;
+		nextButton.classList.remove('disable');
+
+		title.innerHTML = "Feel free to send us a message!";
+	}
+	phase--;
+
+	if (phase < 0)
+		phase = 0;
+}
+
+function send() {
+	console.log('sent!?');
+	document.location = `mailto:lukaj2501@gmail.com?subject=Hello from ${name}&body=${message}`;
+}
 window.addEventListener("resize", () => {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
