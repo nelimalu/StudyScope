@@ -5,6 +5,10 @@
 	--reg-spread: 4px;
 }
 
+a {
+	color: white;
+}
+
 @font-face {
 	font-family: inter;
 	src: url('../assets/fonts/Inter-Regular.otf') format("opentype");
