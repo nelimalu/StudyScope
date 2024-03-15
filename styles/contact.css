@@ -3,7 +3,6 @@
 	--accent-color: #f3b562;
 	--bg-color: white;
 	--bg-blend-color: #f0f0f0;
-	--nav-text-color: white;
 	--ease-text-color: #30313b;
 	--side-margins: 8vw;
 	--nav-background: #553285;
@@ -17,7 +16,24 @@
 body {
 	margin: 0;
 	padding: 0;
+	/*overflow: hidden;*/
+}
+
+#background {
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95%;
+	z-index: 1;
 	overflow: hidden;
+
 }
 
 .main-container {
@@ -27,10 +43,11 @@ body {
 	width: 100%;
 	height: 100%;
 	backdrop-filter: blur(5px);
+	background-color: transparent;
 }
-.nav {
-	z-index: 1;
-}
+
+
+
 
 
 .contact-box {

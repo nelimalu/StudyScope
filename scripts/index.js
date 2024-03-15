@@ -7,6 +7,12 @@ function squish(value, in_min, in_max, out_min, out_max) {
   return percentage * (out_max - out_min) + out_min;  
 }
 
+function scrollToPrograms() {
+  document.getElementById("programs").scrollIntoView({
+      behavior: 'smooth'
+  });
+}
+
 
 window.onload = function() {
   document.addEventListener('mousemove', (event) => {
