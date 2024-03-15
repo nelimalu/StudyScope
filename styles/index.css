@@ -319,12 +319,3 @@
 	border-top-right-radius: 20px;
 }
 
-
-footer {
-	height: 15vh;
-	background-color: var(--nav-reg-color);
-	padding: 5vh;
-	text-align: center;
-	color: white;
-}
-

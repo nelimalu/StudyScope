@@ -125,3 +125,12 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Color of the thumb on hover */
 }
+
+footer {
+	height: 15vh;
+	background-color: var(--nav-reg-color);
+	padding: 5vh;
+	text-align: center;
+	color: white;
+}
+
