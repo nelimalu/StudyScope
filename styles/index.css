@@ -310,6 +310,12 @@
 	stick: bottom;
 }
 
+.disable {
+	background-color: #adadad;
+	cursor: not-allowed;
+
+}
+
 .panel-description {
 	margin-top: 15px;
 }
