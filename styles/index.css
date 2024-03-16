@@ -272,6 +272,7 @@
 }
 
 .panel-tags {
+	padding-top: 5px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -298,7 +299,7 @@
 	background-color: var(--nav-reg-color);
 	color: white;
 	padding: 10px 20px 10px 20px;
-	border-radius: 10px;
+	border-radius: 100px;
 	margin: 0;
 	transition-duration: .3s;
 	margin-top: 3vh;
@@ -310,7 +311,16 @@
 }
 
 .panel-description {
-	margin-top: 5px;
+	margin-top: 15px;
+}
+
+.panel-description-summary {
+	margin-bottom: 15px;
+}
+
+.panel-description-value {
+	padding-left: 10px;
+	padding-top: 5px;
 }
 
 .panel-image {
